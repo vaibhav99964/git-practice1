@@ -1,0 +1,14 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Image Display
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+ </head>
+ <body class="bg-white flex items-center justify-center min-h-screen p-4">
+  <img alt="Elderly man with white hair and beard wearing black coat and earphones sitting on a gray chair" class="max-w-full h-auto rounded" height="400" src="https://storage.googleapis.com/a1aa/image/9a9290d2-f0e2-4e2d-3660-137d22692292.jpg" width="600"/>
+ </body>
+</html>
