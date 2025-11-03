@@ -1,0 +1,87 @@
+this is instalation process of jenkins ubuntu 24.04 version 
+ sudo apt get update -y
+  
+    3  sudo apt-get update
+    4  apt install -y wget apt-transport-https gpg
+    5  
+    9  wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
+   10  echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+   11  apt install temurin-21-jdk
+   12  apt update
+   13  apt install temurin-21-jdk [here we can choose 17 or 21 java version]
+   14  sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc     https://pkg.jenkins.io/debian/jenkins.io-2023.key
+   15  echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"     https://pkg.jenkins.io/debian binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+   16  apt update
+   17  apt -y install jenkins
+   18  systemctl --full status jenkisn
+   19  systemctl --full status jenkins
+   20  systemctl stop jenkins [here we should do some changes in jenkins file becase this process NANO file so that we will change into VI EDITOR process]
+   21  systemctl --full status jenkins 
+    [whenever open that file aftrer open go to 2nd line and writr it here same this ( [service] Environment="JAVA_OPTS=-Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=/var/cache/jenkins/tmp/
+                       -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/New_York -Duser.timezone=America/New_York"  
+                                  Environment="JENKINS_OPTS=--pluginroot=/var/cache/jenkins/plugins" THATS IT)].
+
+   22  update-alternatives --config editor
+   23  clear
+   24  systemctl edit jenkins
+   25  systemctl --full status jenkins
+   26  mkdir -p /var/cache/jenkins/temp
+   27  chown -R jenkins:jenkins /var/cache/jenkins/tmp
+   28  mkdir -p /var/cache/jenkins/temp
+   29  cd /var/cache/jenkins/temp
+   30  ll
+   31  chown -R jenkins:jenkins /var/cache/jenkins/tmp
+   32  cd ..
+   33  cd root
+   34  pwd
+   35  chown -R jenkins:jenkins /var/cache/jenkins/tmp
+   36  systemctl show jenkins
+   37  mkdir -P /var/cache/jenkins/temp
+   38  systemctl show jenkins
+   39  systemctl-analyze verify jenkins.service
+   40  systemd-analyze verify jenkins.service
+   41  systemctl start jenkins
+   42  systemctl --full start jenkins
+   43  journalctl -u jenkins
+   44  systemctl --full start jenkins
+   45  systemctl status jenkins.service
+   46  systemctl edit jenkins
+   47  systemctl --full status jenkins
+   48  mkdir -P /var/cache/jenkins/temp
+   49  mkdir -p /var/cache/jenkins/temp
+   50  chown -R jenkins:jenkins /var/cache/jenkins/tmp
+   51  chown -r jenkins:jenkins /var/cache/jenkins/tmp
+   52  chown -R jenkins:jenkins /var/cache/jenkins/tmp
+   53  sudo mkdir -p /var/cache/jenkins/tmp
+   54  sudo chown -R jenkins:jenkins /var/cache/jenkins
+   55  systemctl show jenkins
+   56  systemd-analyze verify jenkins.service
+   57  systemctl edit jenkins
+   58  systemd-analyze verify jenkins.service
+   59  sudo mkdir -p /var/cache/jenkins/tmp
+   60  sudo chown -R jenkins:jenkins /var/cache/jenkins
+   61  systemctl start jenkins
+   62  systemctm --full status jenkins
+   63  systemctl --full status jenkins
+   64  sudo apt install firewall* -y
+   65  systemctl enable firewalld
+   66  systemctl status firewalld
+   67  firewall-cmd --list--all
+   68  firewall-cmd --list-all
+   69  firewall-cmd --zone-public --add-port=8080/tcp --permanant
+   70  firewall-cmd --zone=public --add-port=8080/tcp --permanent
+   71  firewall-cmd --zone-public --add-service=http --permanant
+   72  firewall-cmd --zone=public --add-service=http --permanant
+   73  firewall-cmd --zone=public --add-service=http --permanent
+   74  firewall-cmd --reload
+   75  firewall-cmd --list-all
+   76  cat /var/lib/jenkins/secrets/initialAdminPassword (now open latest jenkins site ) 
+   77  sudo apt install -y git
+   78  git --versionn
+   79  git --version
+   80  systemctl status git
+   81  sudo apt install -y git
+   82  sudo systemctl status git
+   83  exit
+   84  useradd vaibhav
+   85  passwd vaibhav
